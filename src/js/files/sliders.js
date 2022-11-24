@@ -27,9 +27,9 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.main-slider__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.slider-main__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.main-slider__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.slider-main__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination, Parallax],
@@ -37,7 +37,7 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 1,
 			parallax: true,
-			spaceBetween: 30,
+			spaceBetween: 32,
 			autoHeight: true,
 			speed: 800,
 
@@ -74,8 +74,8 @@ function initSliders() {
 
 			// Кнопки "влево/вправо"
 			navigation: {
-				prevEl: '.slider-arrow_prew',
-				nextEl: '.slider-arrow_next',
+				prevEl: '.slider-main .arrows-slider_prew',
+				nextEl: '.slider-main .arrows-slider_next',
 			},
 
 			// Брейкпоинты
