@@ -62,11 +62,55 @@
 
 .grid {
    &__list {
-      display: grid;
-      gap: rem(10);
+      display: inline-grid;
+      gap: rem(20);
+      grid-template-columns: 4fr 2fr;
+      grid-template-areas: 
+               "tel tel"
+               "notebook notebook"
+               "sale sale"
+               "cartridge cartridge"
+               "smart smart"
+               "sites sites"
+   }
+
+   &__tel {
+      grid-area: tel;
+   }
+
+   &__notebook {
+      grid-area: notebook;
+   }
+
+   &__sale {
+      grid-area: sale;
+   }
+
+   &__cartridge {
+      grid-area: cartridge;
+   }
+
+   &__smart {
+      grid-area: smart;
+   }
+
+   &__sites {
+      grid-area: sites;
    }
 
    &__item {
       border: 1px solid #000;
    }
+
+   @media (min-width:$mobile) {
+      .grid {
+         grid-template-columns: 2fr 4fr;
+         grid-template-areas:
+               "tel notebook"
+               "tel sale"
+               "cartridge smart"
+               "sites"
+      }
+               
+  }
 }
