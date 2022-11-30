@@ -218,7 +218,9 @@
    }
 
    &__item {
-      border: 1px solid #000;
+      padding: rem(25);
+      border-radius: rem(15);
+      background-image: linear-gradient(-110deg, #0f6587, #0f96ab);
    }
 
 //    @media (min-width:$mobile) {
