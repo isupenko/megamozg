@@ -27,6 +27,27 @@
 	//text-align: center;
 }
 
+.title-h4 {
+	@include adaptiveValue("font-size", 18, 16);
+	font-weight: 600;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h5 {
+	@include adaptiveValue("font-size", 16, 14);
+	font-weight: 600;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h6 {
+	@include adaptiveValue("font-size", 14, 12);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
+}
+
 .slider-arrows {
 	display: grid;
 	grid-template-columns: repeat(2, rem(48));
@@ -35,7 +56,7 @@
 .slider-arrow {
 	border-radius: 50%;
 	height: rem(48);
-	background-color: rgba(232, 159, 113, 0.3);
+	background-color: rgba(15, 146, 158, 0.3);
 	color: $orangeColor;
 	font-size: rem(12);
 	transition: all 0.3s ease 0s;
@@ -55,7 +76,7 @@
 	@media (any-hover: hover){
 		&:hover{
 			color: #fff;
-			background-color: rgba(232, 159, 113, 1);
+			background-color: rgba(15, 101, 135, 1);
 		}
 	}
 
@@ -127,7 +148,7 @@
 	text-align: center;
 	background-color: $orangeColor;
 	color: #fff;
-   font-size:rem(18);
+   font-size:rem(16);
 	border: 1px solid $orangeColor;
 	transition: all 0.3s ease 0s;
 	@media (any-hover: hover) {
@@ -135,7 +156,7 @@
          border: 1px solid !important;
 			background-color: #fff;
 			color: $orangeColor;
-         font-weight: 700;
+         font-weight: 600;
 		}
 	}
 }

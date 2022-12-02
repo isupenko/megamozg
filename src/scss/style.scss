@@ -53,7 +53,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-	background-color: #fcfcf7;
+	background-color: #f8f8f8;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -70,7 +70,12 @@ body {
    }
 
    &__grid {
-	padding-top: rem(100);
+		@media (min-width:$tablet){
+			padding-top: rem(100);
+		}
+		@media (max-width:$tablet){
+			padding-top: rem(40);
+		}
    }
 
 	&__categories {

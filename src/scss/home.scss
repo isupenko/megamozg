@@ -20,7 +20,7 @@
 
    &__content {
       align-self: flex-start;
-      flex: 0 0 percent(424, 1240);
+      flex: 0 0 percent(444, 1240);
       @include adaptiveValue("margin-bottom", 40, 15);
       @media (max-width: $tablet){
          margin: 0 rem(-15);
@@ -63,13 +63,13 @@
    }
 
    &__title {
-      @include adaptiveValue("font-size", 42, 24);
+      @include adaptiveValue("font-size", 35, 20);
       font-weight: 700;
       line-height: 110%;
    }
 
    &__text {
-      @include adaptiveValue("font-size", 20 , 16);
+      @include adaptiveValue("font-size", 25 , 16);
       line-height: 120%;
       padding-top: rem(25);
       font-weight: 600;
@@ -247,6 +247,7 @@
    }
 
    &__title {
+      padding-bottom: rem(20);
    }
 
    &__item {
@@ -257,11 +258,11 @@
 }
 
 .category{
-   background: #0f6587;
+   background: #f8f8f8;
    display: flex;
    flex-direction: column;
    position: relative;
-   border-radius: rem(15);
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
    @media (any-hover: hover) {
       &:hover {
          .category__actions {
@@ -290,9 +291,8 @@
    }
 
    &__title {
-      font-size: rem(24);
-      font-weight: 600;
-      line-height: 120%;
+      color: #000;
+      padding-bottom: rem(10);
    }
 
    &__text {
@@ -312,7 +312,6 @@
          justify-content: center;
          align-items: center;
          background-color: rgba(58, 58, 58, 0.74);
-         border-radius: rem(15);
          transition: all 0.3s ease 0s;
          z-index: 3;
       }
