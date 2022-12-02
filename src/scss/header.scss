@@ -4,7 +4,13 @@
 	width: 100%;
 	top: 0;
 	left: 0;
-	
+	min-height: rem(40);
+	&._scroll {
+		.header__wrapper {
+			background-color: rgba(255, 255, 255, 1);
+			box-shadow: 0 rem(8) rem(4) rem(-4) rgba(0, 0, 0, .2);
+		}
+	}
 
 	&__wrapper {
 		position: fixed;
@@ -18,7 +24,7 @@
 		display: flex;
 		align-items: center;
 		padding: rem(5) 0;
-		min-height: rem(125);
+		min-height: rem(100);
 		position: relative;
 		@media (max-width:$tablet){
 			min-height: rem(80);
