@@ -21,8 +21,8 @@ window.onload = function () {
       } else if (!targetElement.closest('.search-form') && document.querySelector('.search-form._active')) {
          document.querySelector('.search-form').classList.remove('_active');
       }
-      // if (targetElement.classList.contains('products__more')) {
-      //    getProducts(targetElement);
+      // if (targetElement.classList.contains('hits__more')) {
+      //    getHits(targetElement);
       //    e.preventDefault();
       // }
 
@@ -65,17 +65,17 @@ window.onload = function () {
    const headerObserver = new IntersectionObserver(callback);
    headerObserver.observe(headerElement);
 
-   //Load more Products
-   // async function getProducts(button) {
+   // Load more Products
+   // async function getHits(button) {
    //    if (!button.classList.contains('_hold')) {
    //       button.classList.add('_hold');
-   //       const file = "json/products.json";
+   //       const file = "json/hits.json";
    //       let response = await fetch(file, {
    //          method: "GET"
    //       });
    //       if (response.ok) {
    //          let result = await response.json();
-   //          loadProducts(result);
+   //          loadHits(result);
    //          button.classList.remove('_hold');
    //          button.remove();
    //       } else {
@@ -84,93 +84,79 @@ window.onload = function () {
    //    }
    // }
 
-   // function loadProducts(data) {
-   //    const productsList = document.querySelector('.products__list');
+   // function loadHits(data) {
+   //    const hitsList = document.querySelector('.hits__list');
 
-   //    data.products.forEach(item => {
-   //       const productId = item.id;
-   //       const productUrl = item.url;
-   //       const productImage = item.image;
-   //       const productTitle = item.title;
-   //       const productText = item.text;
-   //       const productPrice = item.price;
-   //       const productOldPrice = item.priceOld;
-   //       const productShareUrl = item.shareUrl;
-   //       const productLikeUrl = item.likeUrl;
-   //       const productLabels = item.labels;
+   //    data.hits.forEach(item => {
+   //       const hitId = item.id;
+   //       const hitImage = item.image;
+   //       const hitTitle = item.title;
+   //       const hitText = item.text;
+   //       const hitPrice = item.price;
+   //       const hitOldPrice = item.priceOld;
+   //       const hitLabels = item.labels;
 
-   //       let productTemplateStart = `<article data-pid="${productId}" class="products__item item-product">`;
-   //       let productTemplateEnd = `</article>`;
+   //       let hitTemplateStart = `<article data-pid="${hitId}" class="hit__item hit">`;
+   //       let hitTemplateEnd = `</article>`;
 
-   //       let productTemplateLabels = '';
-   //       if (productLabels) {
-   //          let productTemplateLabelsStart = `<div class="item-product__labels">`;
-   //          let productTemplateLabelsEnd = `</div>`;
-   //          let productTemplateLabelsContent = '';
+   //       let hitTemplateLabels = '';
+   //       if (hitLabels) {
+   //          let hitTemplateLabelsStart = `<div class="hit__labels">`;
+   //          let hitTemplateLabelsEnd = `</div>`;
+   //          let hitTemplateLabelsContent = '';
 
-   //          productLabels.forEach(labelItem => {
-   //             productTemplateLabelsContent += `<div class="item-product__label item-product__label_${labelItem.type}">${labelItem.value}</div>`;
+   //          hitLabels.forEach(labelItem => {
+   //             hitTemplateLabelsContent += `<div class="hit__label hit__label_${labelItem.type}">${labelItem.value}</div>`;
    //          });
 
-   //          productTemplateLabels += productTemplateLabelsStart;
-   //          productTemplateLabels += productTemplateLabelsContent;
-   //          productTemplateLabels += productTemplateLabelsEnd;
+   //          hitTemplateLabels += hitTemplateLabelsStart;
+   //          hitTemplateLabels += hitTemplateLabelsContent;
+   //          hitTemplateLabels += hitTemplateLabelsEnd;
    //       }
 
-   //       let productTemplateImage = `
-	// 	<a href="${productUrl}" class="item-product__image -ibg">
-	// 		<img src="img/products/${productImage}" alt="${productTitle}">
-	// 	</a>
-	// `;
-
-   //       let productTemplateBodyStart = `<div class="item-product__body">`;
-   //       let productTemplateBodyEnd = `</div>`;
-
-   //       let productTemplateContent = `
-	// 	<div class="item-product__content">
-	// 		<h3 class="item-product__title">${productTitle}</h3>
-	// 		<div class="item-product__text">${productText}</div>
+   //       let hitTemplateImage = `
+	// 	<div class="hit__image -ibg">
+	// 		<img src="img/hits/${hitImage}" alt="${hitTitle}">
 	// 	</div>
 	// `;
 
-   //       let productTemplatePrices = '';
-   //       let productTemplatePricesStart = `<div class="item-product__prices">`;
-   //       let productTemplatePricesCurrent = `<div class="item-product__price">${productPrice} руб.</div>`;
-   //       let productTemplatePricesOld = `<div class="item-product__price item-product__price_old">${productOldPrice} руб.</div>`;
-   //       let productTemplatePricesEnd = `</div>`;
+   //       let hitTemplateBodyStart = `<div class="hit__body">`;
+   //       let hitTemplateBodyEnd = `</div>`;
 
-   //       productTemplatePrices = productTemplatePricesStart;
-   //       productTemplatePrices += productTemplatePricesCurrent;
-   //       if (productOldPrice) {
-   //          productTemplatePrices += productTemplatePricesOld;
-   //       }
-   //       productTemplatePrices += productTemplatePricesEnd;
-
-   //       let productTemplateActions = `
-	// 	<div class="item-product__actions actions-product">
-	// 		<div class="actions-product__wrapper">
-	// 			<a href="" class="actions-product__btn btn btn_white">Add to cart</a>
-	// 			<a href="${productShareUrl}" class="actions-product__link _icon-share">Поделиться</a>
-	// 			<a href="${productLikeUrl}" class="actions-product__link _icon-favorite">Заценить</a>
-	// 		</div>
+   //       let hitTemplateContent = `
+	// 	<div class="hit__content">
+	// 		<h4 class="hit__title">${hitTitle}</h4>
+	// 		<div class="hit__text">${hitText}</div>
 	// 	</div>
 	// `;
 
-   //       let productTemplateBody = '';
-   //       productTemplateBody += productTemplateBodyStart;
-   //       productTemplateBody += productTemplateContent;
-   //       productTemplateBody += productTemplatePrices;
-   //       productTemplateBody += productTemplateActions;
-   //       productTemplateBody += productTemplateBodyEnd;
+   //       let hitTemplatePrices = '';
+   //       let hitTemplatePricesStart = `<div class="hit__prices">`;
+   //       let hitTemplatePricesCurrent = `<div class="hit__price">${hitPrice} руб.</div>`;
+   //       let hitTemplatePricesOld = `<div class="hit__price hit__price_old">${hitOldPrice} руб.</div>`;
+   //       let hitTemplatePricesEnd = `</div>`;
 
-   //       let productTemplate = '';
-   //       productTemplate += productTemplateStart;
-   //       productTemplate += productTemplateLabels;
-   //       productTemplate += productTemplateImage;
-   //       productTemplate += productTemplateBody;
-   //       productTemplate += productTemplateEnd;
+   //       hitTemplatePrices = hitTemplatePricesStart;
+   //       hitTemplatePrices += hitTemplatePricesCurrent;
+   //       if (hitOldPrice) {
+   //          hitTemplatePrices += hitTemplatePricesOld;
+   //       }
+   //       hitTemplatePrices += hitTemplatePricesEnd;
 
-   //       productsList.insertAdjacentHTML('beforeend', productTemplate);
+   //       let hitTemplateBody = '';
+   //       hitTemplateBody += hitTemplateBodyStart;
+   //       hitTemplateBody += hitTemplateContent;
+   //       hitTemplateBody += hitTemplatePrices;
+   //       hitTemplateBody += hitTemplateBodyEnd;
+
+   //       let hitTemplate = '';
+   //       hitTemplate += hitTemplateStart;
+   //       hitTemplate += hitTemplateLabels;
+   //       hitTemplate += hitTemplateImage;
+   //       hitTemplate += hitTemplateBody;
+   //       hitTemplate += hitTemplateEnd;
+
+   //       hitsList.insertAdjacentHTML('beforeend', hitTemplate);
 
    //    });
    // }
