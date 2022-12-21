@@ -8,36 +8,99 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<section class="page__main-slider slider-main">
-				<div class="slider-main__container">
-					<div class="slider-main__body">
-						<div class="slider-main__content content-main">
-							<h1 class="content-main__title"></h1>
-							<div class="content-main__text"></div>
-							<a href="#" class="content-main__btn"></a>
+			<section class="page__main-slider main-slider">
+				<div class="main-slider__container">
+					<div class="main-slider__body">
+						<div class="main-slider__content content-main">
+							<h1 class="content-main__title">Вызов электрика в Кирове</h1>
+							<h3 class="content-main__text">Любые виды электромонтожа под ключ. Монтаж, демонтаж электропроводки. Техническое обслуживание электросети. Ремонт люстр, выключателей, розеток и прочее.</h3>
+							<a href="tel:+79091381541" class="content-main__text">тел. +7(909)138-15-41</a>
+							<a href="files/price.pdf" data-da=".main-slider__body,991.98" class="content-main__btn btn">Скачать прайс</a>
 						</div>
-						<div class="slider-main__slider slider-main">
-							<div class="slider-main__controls control-slider">
-								<div class="control-slider__dotts"></div>
-								<div class="control-slider__arrows arrows-slider">
-									<button type="button" class="arrows-slider arrows-slider_prev _icon-arrow-down"></button>
-									<button type="button" class="arrows-slider arrows-slider_next _icon-arrow-down"></button>
+						<!-- Оболочка слайдера -->
+						<div class="main-slider__slider slider-main">
+							<div class="slider-main__controls controls-slider">
+								<div class="controls-slider__dotts"></div>
+								<div class="controls-slider__arrows slider-arrows">
+									<button type="button" class="slider-arrow slider-arrow_prew _icon-arrow-down"></button>
+									<button type="button" class="slider-arrow slider-arrow_next _icon-arrow-down"></button>
 								</div>
 							</div>
-						</div>
-						<div class="slider-main__body _swiper">
-							<div class="slider-main__slide">
-								<div class="slider-main__image _ibg">
-									<img src="img" alt="">
+							<!-- Двигающееся часть слайдера -->
+							<div class="main-slider__wrapper swiper-wrapper">
+								<!-- Слайд -->
+								<div class="main-slider__slide swiper-slide">
+									<div class="swiper-slide__img -ibg">
+										<img src="img/main-slider/01.jpg" alt="Проводка в квартире">
+									</div>
+									<a href="room.html" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%"
+										class="swiper-slide__content">
+										<div class="swiper-slide__title">Проводка в квартире под ключ</div>
+										<div class="swiper-slide__text">1-комнатная кв. до 45 кв.м.</div>
+										<div class="swiper-slide__price _icon-arrow-right">от 5000.00 руб</div>
+									</a>
 								</div>
-								<a href="#" class="slider-main__content">
-									<h4 class="slider-main__title"></h4>
-									<div class="slider-main__text"></div>
-									<div class="slider-main__price _icon-arrow-right"></div>
-								</a>
+								<div class="main-slider__slide swiper-slide">
+									<div class="swiper-slide__img -ibg">
+										<img src="img/main-slider/02.jpeg" alt="Проводка в доме">
+									</div>
+									<a href="house.html" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%"
+										class="swiper-slide__content">
+										<div class="swiper-slide__title">Проводка в частном доме под ключ</div>
+										<div class="swiper-slide__text">Цена указана за 1 кв.м.</div>
+										<div class="swiper-slide__price _icon-arrow-right">от 900.00 руб</div>
+									</a>
+								</div>
+								<div class="main-slider__slide swiper-slide">
+									<div class="swiper-slide__img -ibg">
+										<img src="img/main-slider/03.jpg" alt="Проводка для бизнеса">
+									</div>
+									<a href="commerce.html" data-swiper-parallax-opacity="0" data-swiper-parallax-x="-100%"
+										class="swiper-slide__content">
+										<div class="swiper-slide__title">Проводка в нежелых помещениях</div>
+										<div class="swiper-slide__text">Цены индивидуальны</div>
+										<div class="swiper-slide__price _icon-arrow-right">от 1300 руб</div>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
+				</div>
+			</section>
+			<section class="page__grid grid">
+				<div class="grid__container">
+					<ul class="grid__list">
+						<li class="grid__item grid__tel">
+							<h2 class="grid__title">Ремонт телефонов и планшетов</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+						<li class="grid__item grid__notebook">
+							<h2 class="grid__title">Ремонт компьютеров и ноутбуков</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+						<li class="grid__item grid__sale">
+							<h2 class="grid__title">Комплектующие и акцессуары</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+						<li class="grid__item grid__cartridge">
+							<h2 class="grid__title">Заправка лазерных картриджей</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+						<li class="grid__item grid__smart">
+							<h2 class="grid__title">Умные устройства</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+						<li class="grid__item grid__sites">
+							<h2 class="grid__title">Создание сайтов</h2>
+							<div class="grid__text">...</div>
+							<a href="#" class="grid__btn btn">Подробнее</a>
+						</li>
+					</ul>
 				</div>
 			</section>
 		</main>
