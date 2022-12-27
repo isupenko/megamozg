@@ -68,11 +68,25 @@
       line-height: 110%;
    }
 
-   &__text {
-      @include adaptiveValue("font-size", 25 , 16);
+   &__sub-title{
+      @include adaptiveValue("font-size", 18, 16);
       line-height: 120%;
-      padding-top: rem(25);
-      font-weight: 600;
+      padding-top: rem(15);
+      font-weight: 700;
+      span {
+         font-size: rem(14);
+      }
+   }
+
+   &__text {
+      padding: rem(10) 0;
+      font-size: rem(14)
+   }
+
+   &__tel{
+      @include adaptiveValue("font-size", 20 , 16);
+      padding-top: rem(30);
+      font-weight: 900;
    }
 
    &__btn {
@@ -128,7 +142,7 @@
    }
 
    &__title {
-      @include adaptiveValue("font-size", 28, 22);
+      font-size: rem(20);
       font-weight: 600;
       line-height: 120%;
    }
@@ -143,8 +157,8 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       align-items: center;
-      font-weight: 600;
-      font-size: rem(20);
+      font-weight: 700;
+      font-size: rem(16);
       &::before {
          margin-right: rem(10);
          font-size: rem(12);
@@ -183,9 +197,11 @@
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
       gap: rem(35);
+      
    }
 
    &__item {
+      
    }
 
    &__link {
@@ -193,21 +209,98 @@
 }
 .product {
 
-   &__image {
-      padding-bottom: math.div(200px, 350px)*100%;
-      overflow: hidden;
-      img {
-         transition: transform 0.3s ease 0s;
-         @media (any-hover: hover){
-            &:hover{
-               transform: scale(1.2);
-            }
-         }
+   &__wrapper {
+      
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      border: 3px solid #e97171;
+      border-radius: rem(35);
+      
+   }
+
+   // &__image {
+   //    padding-bottom: math.div(200px, 350px)*100%;
+   //    overflow: hidden;
+   //    img {
+   //       transition: transform 0.3s ease 0s;
+   //       @media (any-hover: hover){
+   //          &:hover{
+   //             transform: scale(1.2);
+   //          }
+   //       }
+   //    }
+   // }
+}
+
+.wrapper-product {
+   padding: 0 rem(30);
+   min-height: rem(300);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   flex: 1 1 auto;
+   //position: relative;
+   @keyframes bounce {
+      0%, 20%, 60%, 100% {
+         transform: translateY(0);
+         transform: translateY(0);
       }
+   
+      40% {
+         transform: translateY(-15px);
+         transform: translateY(-15px);
+      }
+   
+      80% {
+         transform: translateY(-10px);
+         transform: translateY(-10px);
+      }
+   }
+   @media (any-hover: hover){
+      &:hover{
+         animation: bounce 0.5s;
+      }
+   }
+   &__title {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: rem(30);
+      font-weight: 900;
+      color: $orangeColor;
+      padding: rem(20) 0;
+      border-bottom: 1px solid rgb(239, 9, 9);
+
+   }
+   &__text {
+      color: $grayColor;
+      font-weight: 600;
+      padding: rem(20) 0;
    }
 }
 
-
+.wrapper-product_color0 {
+   border: 2px solid #065381;
+}
+.wrapper-product_color1 {
+   border: 2px solid #34b2e5;
+}
+.wrapper-product_color2 {
+   border: 2px solid #63d1da;
+}
+.wrapper-product_color3 {
+   border: 2px solid #8b0f3c;
+}
+.wrapper-product_color4 {
+   border: 2px solid #e44856;
+}
+.wrapper-product_color5 {
+   border: 2px solid #ff9129;
+}
 
 /* ------------------------------- Hits ------------------------------------*/
 
