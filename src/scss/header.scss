@@ -137,7 +137,7 @@
 				}
 				.menu__arrow,
 				.menu__link {
-					color: $orangeColor;
+					color: $yellowColor;
 				}
 			}
 		}
@@ -162,7 +162,7 @@
 				}
 				.menu__arrow,
 				.menu__link {
-					color: $orangeColor;
+					color: $yellowColor;
 				}
 			}
 		}
@@ -193,7 +193,7 @@
 
 	&__sub-list {
 		position: relative;
-		background-color: $orangeColor;
+		background-color: $yellowColor;
 		padding: rem(15);
 		flex: 1 1 100%;
 		@media (min-width:$mobile){
@@ -201,7 +201,7 @@
 			visibility: hidden;
 			transition: all 0.3s ease 0s;
 			transform: translate(0px, 20px);
-			min-width: rem(200);
+			min-width: rem(300);
 			left: 0;
 			pointer-events: none;
 			position: absolute;
@@ -214,8 +214,9 @@
 	}
 
 	&__sub-item {
+		padding-top: rem(5);
 		@media (max-width:$mobile){
-         padding-top: 10px;
+         padding-top: rem(10);
       }
 	}
 

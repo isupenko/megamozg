@@ -27,17 +27,17 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
 	// Перечень слайдеров
 	// Проверяем, есть ли слайдер на стронице
-	if (document.querySelector('.main-slider__slider')) { // Указываем скласс нужного слайдера
+	if (document.querySelector('.promo__slider')) { // Указываем скласс нужного слайдера
 		// Создаем слайдер
-		new Swiper('.main-slider__slider', { // Указываем скласс нужного слайдера
+		new Swiper('.promo__slider', { // Указываем скласс нужного слайдера
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination, Parallax],
 			observer: true,
 			observeParents: true,
-			slidesPerView: 1,
+			slidesPerView: 'auto',
 			parallax: true,
-			spaceBetween: 30,
+			spaceBetween: 20,
 			autoHeight: true,
 			speed: 800,
 

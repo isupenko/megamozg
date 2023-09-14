@@ -1,306 +1,208 @@
-.main-slider {
+/* ----------------------------- promo ---------------------------------*/
+
+.promo {
 
    &__container {
-   }
-
-   &__body {
-      padding-top: rem(140);
-      position: relative;
-      z-index: 2;
-      @media (max-width: $tablet){
-         padding-top: rem(80);
-      }
-      @media (max-width: $mobile){
-         padding-top: rem(60);
-      }
       @media (min-width: $tablet){
          display: flex;
       }
    }
 
-   &__content {
-      align-self: flex-start;
-      flex: 0 0 percent(444, 1240);
-      @include adaptiveValue("margin-bottom", 40, 15);
-      @media (max-width: $tablet){
-         margin: 0 rem(-15);
+   &__body {
+      flex: 0 0 rem(500);
+      position: relative;
+      z-index: 5;
+      align-self: center;
+      @media (min-width: $tablet){
+         @include adaptiveValue("padding-right", 50, 20);
       }
+   }
+
+   &__title {
+      font-size: rem(40);
+      font-weight: 900;
+   }
+
+   &__sub-title {
+      font-size: rem(20);
+      font-weight: 600;
+      padding: rem(10) 0;
+   }
+
+   &__tel {
+      font-size: rem(30);
+      font-weight: 600;
+   }
+
+   &__btn {
+      display: block;
+      margin-top: rem(20);
    }
 
    &__slider {
       flex: 1 1 auto;
       min-width: 0;
-      align-self: flex-end;
-      
-      @media (max-width: $tablet){
-         margin: 0 rem(-15);
-      }
+      align-self: flex-start;
+   }
+}
+
+.slider-promo {
+   position: relative;
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100vw;
+      left: 0;
+      background-color: #fff;
+      z-index: 2;
+      transform: translate(-100%, 0);
    }
 
    &__wrapper {
-      overflow: visible;
-      @media (min-width: $tablet){
-         @include adaptiveValue("width", 934, 290);
-      }
    }
 
    &__slide {
-
-   }
-}
-.content-main {
-   background-color: rgba(255, 255, 255, 0.72);
-   position: relative;
-   z-index: 3;
-   padding-left: rem(15);
-   padding-right: rem(15);
-   @include adaptiveValue("padding-top", 40, 15);
-   @include adaptiveValue("padding-bottom", 50, 15);
-   @media (min-width: $tablet){
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      background-color: rgba(255, 255, 255, 0.9);
-      @include adaptiveValue("padding", 40, 1);
-   }
-
-   &__title {
-      @include adaptiveValue("font-size", 35, 20);
-      font-weight: 700;
-      line-height: 110%;
-   }
-
-   &__sub-title{
-      @include adaptiveValue("font-size", 18, 16);
-      line-height: 120%;
-      padding-top: rem(15);
-      font-weight: 700;
-      span {
-         font-size: rem(14);
+      width: rem(360);
+      position: relative;
+      overflow: hidden;
+      max-height: rem(500);
+      &.swiper-slide-active {
+         .swiper-slide__img {
+            padding-bottom: 100%;
+         }
       }
-   }
-
-   &__text {
-      padding: rem(10) 0;
-      font-size: rem(14)
-   }
-
-   &__tel{
-      @include adaptiveValue("font-size", 20 , 16);
-      padding-top: rem(30);
-      font-weight: 900;
-   }
-
-   &__btn {
-      margin-top: rem(25);
-      width: 100%;
-   }
-}
-.slider-main {
-   display: flex;
-   flex-direction: column;
-   align-items: flex-end;
-   @media (max-width: $tablet){
-      flex-direction: column-reverse;
    }
 
    &__controls {
-      margin-bottom: rem(20);
-      align-self: stretch;
-      @media (min-width: $tablet){
-         padding-left: rem(20);
-      }
-      @media (max-width: $tablet){
-         padding-top: rem(20);
-      }
    }
 }
 
+.swiper-wrapper {
+
+}
 .swiper-slide {
-   position: relative;
 
    &__img {
-      padding: 0 0 61% 0;
+      // transition: padding-bottom 0.6s ease 0s;
+      padding-bottom: 100%;
+      @media (min-width: $mobile){
+         padding-bottom: 83%;
+      }
    }
 
    &__content {
-      min-width: rem(295);
-      max-width: rem(300);
-      overflow: auto;
+      position: absolute;
       color: inherit;
-      display: flex;
-      flex-direction: column;
-      padding: rem(15);
-      background:rgba(255, 255, 255, 0.9);
-      @media (min-width: $mobile){
+      max-width: 240px;
+      @include adaptiveValue("left", 24, 15);
+      @include adaptiveValue("bottom", 24, 15);
+      @include adaptiveValue("padding", 32, 15);
+      background-color: rgba(255, 255, 255, 0.9);
+      &::before {
          position: absolute;
-         min-width: rem(350);
-         @include adaptiveValue("right", 40, 0);
-         @include adaptiveValue("bottom", 40, 0);
-      }
-      @media (max-width: $mobile) {
-         max-width: 100%;
+         bottom: 0;
+         right: 0;
+         transform: translate(100%, 0);
+         width: rem(48);
+         height: rem(48);
+         background-color: $yellowColor;
+         color: #fff;
+         display: flex;
+         align-items: center;
+         justify-content: center;
       }
    }
 
    &__title {
-      font-size: rem(20);
-      font-weight: 600;
-      line-height: 120%;
-   }
-
-   &__text {
-      line-height: 150%;
-      color: $grayColor;
    }
 
    &__price {
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-      align-items: center;
-      font-weight: 700;
-      font-size: rem(16);
-      &::before {
-         margin-right: rem(10);
-         font-size: rem(12);
-      }
    }
-
 }
+
 .controls-slider {
-   display: flex;
-   align-items: center;
 
    &__dotts {
-      flex: 1 1 auto;
-      @media (max-width: $tablet){
-         justify-content: center;
+      @media (min-width: $mobile){
+         position: absolute;
+         bottom: rem(10);
+         width: 100%;
+         left: rem(396);
       }
-      
    }
 
    &__arrows {
-      @media (max-width: $tablet){
-         display: none;
-      }
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      // transform: translate(0 -50%);
+      width: calc(100% + 48px);
+      left: -24px;
+      z-index: 5;
+      justify-content: space-between;
+   }
+}
+.slider-arrows {
+   pointer-events: auto;
+}
+.slider-arrow {
+
+   &_prew {
+   }
+
+   &_next {
    }
 }
 
-/* --------------------------- products --------------------------------*/
+/* ----------------------------- / promo ---------------------------------*/
 
+/* --------------------------- servises --------------------------------*/
 
-.products {
-
-   &__container {
-   }
-
+.services {
+   margin-top: rem(50);
+   padding: rem(30) 0;
+   background-color: $yellowColor;
    &__list {
+      // display: flex;
+      // flex-wrap: wrap;
+      // column-gap: rem(20);
+      // justify-content: space-between;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(rem(300), 1fr));
-      gap: rem(35);
-      
+      grid-template-columns: repeat(auto-fit, minmax(rem(200), 1fr));
    }
-
    &__item {
-      
-   }
-
-   &__link {
-   }
-}
-.product {
-
-   &__wrapper {
-      
       display: flex;
-      flex-direction: column;
-      text-align: center;
-      border: 3px solid #e97171;
-      border-radius: rem(35);
-      
-   }
-
-   // &__image {
-   //    padding-bottom: math.div(200px, 350px)*100%;
-   //    overflow: hidden;
-   //    img {
-   //       transition: transform 0.3s ease 0s;
-   //       @media (any-hover: hover){
-   //          &:hover{
-   //             transform: scale(1.2);
-   //          }
-   //       }
-   //    }
-   // }
-}
-
-.wrapper-product {
-   padding: 0 rem(30);
-   min-height: rem(300);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   flex: 1 1 auto;
-   //position: relative;
-   @keyframes bounce {
-      0%, 20%, 60%, 100% {
-         transform: translateY(0);
-         transform: translateY(0);
-      }
-   
-      40% {
-         transform: translateY(-15px);
-         transform: translateY(-15px);
-      }
-   
-      80% {
-         transform: translateY(-10px);
-         transform: translateY(-10px);
-      }
-   }
-   @media (any-hover: hover){
-      &:hover{
-         animation: bounce 0.5s;
-      }
-   }
-   &__title {
-      display: flex;
-      width: 100%;
-      flex-direction: column;
       justify-content: center;
-      align-items: center;
-      font-size: rem(30);
-      font-weight: 900;
-      color: $orangeColor;
-      padding: rem(20) 0;
-      border-bottom: 1px solid rgb(239, 9, 9);
-
+      @keyframes bounce {
+               0%, 20%, 60%, 100% {
+                  transform: translateY(0);
+                  transform: translateY(0);
+               }
+            
+               40% {
+                  transform: translateY(-15px);
+                  transform: translateY(-15px);
+               }
+            
+               80% {
+                  transform: translateY(-10px);
+                  transform: translateY(-10px);
+               }
+            }
+            @media (any-hover: hover){
+               &:hover{
+                  animation: bounce 0.5s;
+               }
+            }
+         }
+   &__image img{
+      max-height: rem(150);
    }
-   &__text {
-      color: $grayColor;
-      font-weight: 600;
-      padding: rem(20) 0;
-   }
 }
 
-.wrapper-product_color0 {
-   border: 2px solid #065381;
-}
-.wrapper-product_color1 {
-   border: 2px solid #34b2e5;
-}
-.wrapper-product_color2 {
-   border: 2px solid #63d1da;
-}
-.wrapper-product_color3 {
-   border: 2px solid #8b0f3c;
-}
-.wrapper-product_color4 {
-   border: 2px solid #e44856;
-}
-.wrapper-product_color5 {
-   border: 2px solid #ff9129;
-}
+/* -------------------------------  /Servises ------------------------------------*/
 
 /* ------------------------------- Hits ------------------------------------*/
 
@@ -612,3 +514,58 @@
 }
 
 
+/*-----*-----*-----*-----*-----*-----*----- page price-pc -----*-----*-----*-----*-----*-----*-----*-----*/
+
+
+.pc-price {
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: rem(30);
+      background-color: $orangeColor;
+      border-radius: rem(5);
+   }
+
+   &__title {
+      font-size: rem(17);
+      font-weight: 600;
+      color: #fff;
+
+   }
+
+   &__list {
+      margin-bottom: rem(40);
+   }
+
+
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      border-bottom: 1px solid #d7d7d7;
+      padding: rem(10);
+   }
+
+   &__info {
+      color:red;
+
+   }
+}
+.price {
+
+   &__title {
+   }
+
+   &__value {
+      padding-left: rem(70);
+      padding-right: rem(10);
+   }
+}
+
+
+
+
+/*-----*-----*-----*-----*-----*-----*----- page smart-house -----*-----*-----*-----*-----*-----*-----*-----*/

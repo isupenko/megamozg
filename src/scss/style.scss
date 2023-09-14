@@ -20,9 +20,10 @@ $fontSize: rem(16); // где 14(px) - размер шрифта по умолч
 // Основные цвета
 $mainColor: #3a3a3a; // Цвет шрифта по умолчанию
 $orangeColor: #0f6587;
+$yellowColor: #e5c643;
 $grayColor: #898989;
 $darkGrayColor: #616161;
-$liteGrayColor: #d7d7d7;
+$liteGrayColor: #f4f6f5;
 
 // НАСТРОЙКИ ===============================================================================================================================================================================================================================================================================================
 // Минимальная ширина страницы
@@ -53,7 +54,7 @@ $responsiveType: 1;
 @import "base/null";
 
 body {
-	background-color: #f8f8f8;
+	background-color: #fff;
 	// Скролл заблокирован
 	.lock & {
 		overflow: hidden;
@@ -66,11 +67,20 @@ body {
 
 .page {
 	flex: 1 1 auto;
-   &__main-slider {
-   }
+
+	&__promo {
+		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-bottom", 44, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+	}
 
 	&__products {
-   	padding: rem(60) 0;
+
    }
 
 	&__categories {
@@ -79,6 +89,14 @@ body {
 
 	&__life {
 		@include adaptiveValue("padding-bottom", 85, 40);
+	}
+
+	&__price-pc {
+		@include adaptiveValue ("margin-top", 120, 80);
+   }
+
+	&__smart-house {
+		@include adaptiveValue ("margin-top", 120, 80);
 	}
 }
 
