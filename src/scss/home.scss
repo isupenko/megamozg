@@ -16,6 +16,13 @@
       @media (min-width: $tablet){
          @include adaptiveValue("padding-right", 50, 20);
       }
+      @media (max-width: $tablet){
+         text-align: center;
+      }
+      @media (max-width: $mobileSmall){
+         text-align: center;
+         margin: 0 15px;
+      }
    }
 
    &__title {
@@ -25,24 +32,35 @@
 
    &__sub-title {
       font-size: rem(20);
-      font-weight: 600;
+      font-weight: 700;
       padding: rem(10) 0;
+      & span {
+         font-size: rem(16);
+      }
    }
 
    &__tel {
-      font-size: rem(30);
+      font-size: rem(26);
       font-weight: 600;
    }
 
    &__btn {
-      display: block;
       margin-top: rem(20);
+      & a {
+         width: 100%;
+      }
+      @media (max-width:$tablet){
+         margin-bottom: rem(30);
+      }
    }
 
    &__slider {
       flex: 1 1 auto;
       min-width: 0;
       align-self: flex-start;
+   }
+   @media (max-width: $mobileSmall){
+      margin: 0 -15px;
    }
 }
 
@@ -73,15 +91,12 @@
             padding-bottom: 100%;
          }
       }
-   }
-
-   &__controls {
+      @media (max-width: $mobileSmall){
+         width: 100%;
+      }
    }
 }
 
-.swiper-wrapper {
-
-}
 .swiper-slide {
 
    &__img {
@@ -96,9 +111,10 @@
       position: absolute;
       color: inherit;
       max-width: 240px;
-      @include adaptiveValue("left", 24, 15);
-      @include adaptiveValue("bottom", 24, 15);
-      @include adaptiveValue("padding", 32, 15);
+      text-align: center;
+      @include adaptiveValue("left", 20, 15);
+      @include adaptiveValue("bottom", 20, 15);
+      @include adaptiveValue("padding", 20, 15);
       background-color: rgba(255, 255, 255, 0.9);
       &::before {
          position: absolute;
@@ -116,9 +132,12 @@
    }
 
    &__title {
+      font-weight: 700;
+      line-height: 140%;
    }
 
    &__price {
+      font-weight: 700;
    }
 }
 
@@ -131,17 +150,25 @@
          width: 100%;
          left: rem(396);
       }
+      @media (max-width: $mobile){
+         justify-content: center;
+         padding-top: rem(20);
+      }
    }
 
    &__arrows {
       pointer-events: none;
       position: absolute;
       top: 50%;
-      // transform: translate(0 -50%);
-      width: calc(100% + 48px);
-      left: -24px;
+      transform: translate(0, -50%);
+      width: calc(100% - 48px);
+      left: 24px;
       z-index: 5;
       justify-content: space-between;
+      @media (min-width: $pc){
+         width: calc(100% + 48px);
+         left: -24px;
+      }
    }
 }
 .slider-arrows {
@@ -161,7 +188,7 @@
 /* --------------------------- servises --------------------------------*/
 
 .services {
-   margin-top: rem(50);
+   margin: rem(50) 0;
    padding: rem(30) 0;
    background-color: $yellowColor;
    &__list {
@@ -203,6 +230,114 @@
 }
 
 /* -------------------------------  /Servises ------------------------------------*/
+
+/* -------------------------------  websites ------------------------------------*/
+
+.website {
+
+   &__container {
+   }
+
+   &__title {
+      padding-bottom: rem(20);
+   }
+
+   &__slider {
+   }
+}
+
+.slider-website {
+   position: relative;
+
+   &__wrapper {
+      
+   }
+
+   &__slide {
+      display: flex;
+      flex-direction: column;
+      transition: box-shadow 0.3s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            box-shadow: 0 0 22px rgba(37, 37, 37, 0.3);
+         }
+      }
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      padding: rem(15);
+      flex: 1 1 auto;
+      align-items: flex-start;
+   }
+
+   &__title {
+      flex: 1 1 auto;
+      color: inherit;
+      font-weight: 600;
+      line-height: 120%;
+      @include adaptiveValue("font-size", 24, 18);
+      transition: color 0.3s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            color: $yellowColor
+         }
+      }
+   }
+
+   &__text {
+   }
+
+   &__controls {
+   }
+
+   &__dotts {
+      justify-content: center;
+   }
+
+   &__arrows {
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: calc(100% - 48px);
+      left: 24px;
+      z-index: 5;
+      justify-content: space-between;
+      @media (min-width: $pc){
+         width: calc(100% + 48px);
+         left: -24px;
+      }
+      @media (max-width: $mobile){
+         display: none;
+      }
+   }
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+
+   &__img {
+      padding-bottom: div math(251, 391);
+   }
+}
+.controls-slider {
+}
+.slider-arrows {
+   pointer-events: auto;
+}
+.slider-arrow {
+
+   &_prew {
+   }
+
+   &_next {
+   }
+}
+
+
+/* -------------------------------  /websites ------------------------------------*/
 
 /* ------------------------------- Hits ------------------------------------*/
 
@@ -420,6 +555,188 @@
 }
 
 
+/*------------------------------------ accessories -------------------------------------*/
+
+.accessories {
+
+   &__container {
+      @media (min-width: $tablet){
+         display: flex;
+      }
+   }
+
+   &__body {
+      flex: 0 0 rem(500);
+      position: relative;
+      z-index: 5;
+      align-self: center;
+      @media (min-width: $tablet){
+         @include adaptiveValue("padding-left", 50, 20);
+      }
+      @media (max-width: $tablet){
+         text-align: center;
+      }
+      @media (max-width: $mobileSmall){
+         text-align: center;
+         margin: 0 15px;
+      }
+   }
+
+   &__title {
+      font-size: rem(40);
+      font-weight: 900;
+      text-align: right;
+   }
+
+   &__sub-title {
+      font-size: rem(20);
+      font-weight: 500;
+      padding: rem(10) 0;
+      text-align: right;
+      color: $darkGrayColor;
+   }
+
+   &__btn {
+      margin-top: rem(20);
+      & a {
+         width: 100%;
+      }
+      @media (max-width:$tablet){
+         margin-bottom: rem(30);
+      }
+   }
+
+   &__slider {
+      flex: 1 1 auto;
+      min-width: 0;
+      align-self: flex-start;
+   }
+   @media (max-width: $mobileSmall){
+      margin: 0 -15px;
+   }
+}
+.btn {
+}
+.slider-accessories {
+   position: relative;
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 100vw;
+      right: 0;
+      background-color: #fff;
+      z-index: 2;
+      transform: translate(100%, 0px);
+   }
+
+   &__wrapper {
+   }
+
+   &__slide {
+      width: rem(360);
+      position: relative;
+      overflow: hidden;
+      max-height: rem(500);
+      &.swiper-slide-active {
+         .swiper-slide__img {
+            padding-bottom: 100%;
+         }
+      }
+      @media (max-width: $mobileSmall){
+         width: 100%;
+      }
+   }
+
+   &__controls {
+   }
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+
+   &__img {
+      padding-bottom: 100%;
+      @media (min-width: $mobile){
+         padding-bottom: 83%;
+      }
+   }
+
+   &__content {
+      position: absolute;
+      color: inherit;
+      max-width: 240px;
+      @include adaptiveValue("left", 24, 15);
+      @include adaptiveValue("bottom", 24, 15);
+      @include adaptiveValue("padding", 32, 15);
+      background-color: rgba(255, 255, 255, 0.9);
+      &::before {
+         position: absolute;
+         bottom: 0;
+         right: 0;
+         transform: translate(100%, 0);
+         width: rem(48);
+         height: rem(48);
+         background-color: $yellowColor;
+         color: #fff;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+      }
+   }
+
+   &__title {
+   }
+
+   &__price {
+   }
+}
+
+.controls-slider {
+
+   &__dotts {
+      @media (min-width: $mobile){
+         position: absolute;
+         bottom: rem(10);
+         width: 100%;
+         left: rem(396);
+      }
+      @media (max-width: $mobile){
+         justify-content: center;
+         padding-top: rem(20);
+      }
+   }
+
+   &__arrows {
+      pointer-events: none;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: calc(100% - 48px);
+      left: 24px;
+      z-index: 6;
+      justify-content: space-between;
+      @media (min-width: $pc){
+         width: calc(100% + 48px);
+         left: -24px;
+      }
+   }
+}
+.slider-arrows {
+   pointer-events: auto;
+}
+.slider-arrow {
+
+   &_prew {
+   }
+
+   &_next {
+   }
+}
+
+/*------------------------------------ /accessories -------------------------------------*/
+
 /*----------------------------------- life ----------------------------------------*/
 
 .life {
@@ -475,10 +792,10 @@
    }
 }
 .row-life {
-
+   
    &_left-top {
       justify-content: end;
-      align-items: center;
+      align-items: end;
    }
 
    &_left-bottom {
@@ -499,6 +816,7 @@
    }
 
    &__item {
+      
       @media (any-hover: hover){
          img{
             transition: all 0.8s ease 0s;

@@ -265,5 +265,47 @@ window.onload = function () {
    //       }
    //    }
    // }
+   const life = document.querySelector('.life__body');
+   if (life && !isMobile.any()) {
+      const lifeItems = document.querySelector('.life__items');
+      const lifeColumn = document.querySelectorAll('.life__column');
 
+      const speed = life.dataset.speed;
+
+      let positionX = 0;
+      let coordXprocent = 0;
+
+      function setMouseGalleryStyle() {
+         let lifeItemWidth = 0;
+         lifeColumn.forEach(element => {
+            lifeItemWidth += element.offsetWidth;
+         });
+
+         const lifeDifferent = lifeItemWidth - life.offsetWidth;
+         const distX = Math.floor(coordXprocent - positionX);
+
+         positionX = positionX + (distX * speed);
+         let position = lifeDifferent / 200 * positionX;
+
+         lifeItems.style.cssText = `transform: translate3d(${-position}px,0,0)`;
+
+         if (Math.abs(distX) > 0) {
+            requestAnimationFrame(setMouseGalleryStyle);
+         } else {
+            life.classList.remove('_init');
+         }
+      }
+      life.addEventListener("mousemove", function (e){
+         const lifeWidth = life.offsetWidth;
+
+         const coordX = e.pageX - lifeWidth / 2;
+
+         coordXprocent = coordX / lifeWidth * 200;
+
+         if (!life.classList.contains('_init')) {
+            requestAnimationFrame(setMouseGalleryStyle);
+            life.classList.add('_init');
+         }
+      })
+   }
 }
