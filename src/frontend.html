@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"МегаМозг"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="page__frontend frontend">
+            <h1 class="frontend__title">FRONT-END разработка с нуля</h1>
+            <div class="frontend__text">В данном разделе хочется пояснить что это за направление и с чем мы умеем
+               работать. </br>Фронтенд разработка — это создание клиентской части сайта. Это все, что видит пользователь
+               и с чем может взаимодействовать при помощи браузера.
+               Front-end разработчик занимается версткой шаблона сайта и созданием пользовательского интерфейса.
+               FrontEnd разработчик создает видимую для пользователя часть веб-страницы, его главная задача заключается
+               в том, чтобы точно воспроизвести проект дизайнера.
+               </br>Наряду с фронтендом существует еще бэкенд разработка - создание серверной части, то есть то, что
+               происходит "за кулисами", скрытые логические вычисления.
+               Это другое направление в разработке сайтов и этим занимаются другие люди.
+               </br> Далее посмотрим что мы умеем и какие сайту готовы для вас сверстать.
+            </div>
+            <div class="frontend__items">
+               <article class="frontend__item landing">
+                  <h2 class="landing__title">Посадочная страница</h2>
+                  <div class="landing__image -ibg"></div>
+                  <div class="landing__text"></div>
+                  <div class="landing__price">Цена: от 5000 руб.</div>
+               </article>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>
