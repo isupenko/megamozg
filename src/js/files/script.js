@@ -267,7 +267,7 @@ window.onload = function () {
    // }
    const life = document.querySelector('.life__body');
    if (life && !isMobile.any()) {
-      const lifeItems = document.querySelector('.life__items');
+      const lifeItems = document.querySelector('.life__list');
       const lifeColumn = document.querySelectorAll('.life__column');
 
       const speed = life.dataset.speed;
@@ -276,12 +276,12 @@ window.onload = function () {
       let coordXprocent = 0;
 
       function setMouseGalleryStyle() {
-         let lifeItemWidth = 0;
+         let lifeItemsWidth = 0;
          lifeColumn.forEach(element => {
-            lifeItemWidth += element.offsetWidth;
+            lifeItemsWidth += element.offsetWidth;
          });
 
-         const lifeDifferent = lifeItemWidth - life.offsetWidth;
+         const lifeDifferent = lifeItemsWidth - life.offsetWidth;
          const distX = Math.floor(coordXprocent - positionX);
 
          positionX = positionX + (distX * speed);
@@ -306,6 +306,6 @@ window.onload = function () {
             requestAnimationFrame(setMouseGalleryStyle);
             life.classList.add('_init');
          }
-      })
+      });
    }
 }
