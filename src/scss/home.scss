@@ -475,7 +475,7 @@
 }
 
 
-/*-------------------------------- categories -------------------------------*/
+/*-------------------------------- defects -------------------------------*/
 
 .defects{
 
@@ -887,31 +887,17 @@
       gap: rem(40);
    }
 
-   &__link {
-      
-   }
-
    &__item {
       padding: rem(20);
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      @media (any-hover: hover) {
-         &:hover {
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-         }
-      }
-
+      border: 2px dotted $yellowColor;
+      border-radius: rem(20);
    }
 }
 .item-frontend {
 
    &__title {
       text-align: center;
-   }
-
-   &__image {
-      padding-bottom: 80%;
-      margin: rem(20) 0;
-      
+      padding-bottom: rem(10);
    }
 
    &__content {
@@ -924,13 +910,86 @@
       font-weight: 500;
       line-height: 1.2;
    }
+}
 
-   &__price {
-      font-size: rem(20);
-      font-weight: 700;
-      padding-top: rem(10);
+
+.web-sites {
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__list {
+   }
+
+   &__item {
    }
 }
+
+.item-website {
+
+   &__link {
+   }
+
+   &__image {
+   }
+
+   &__body {
+   }
+
+   &__content {
+   }
+
+   &__title {
+   }
+
+   &__text {
+   }
+
+   &__price {
+   }
+}
+
+.applications {
+
+   &__container {
+   }
+
+   &__title {
+   }
+
+   &__list {
+   }
+
+   &__item {
+   }
+}
+.item-application {
+
+   &__link {
+   }
+
+   &__image {
+   }
+
+   &__body {
+   }
+
+   &__content {
+   }
+
+   &__title {
+   }
+
+   &__text {
+   }
+
+   &__price {
+   }
+}
+
 
 
 /*-----*-----*-----*-----*-----*-----*----- cartridges -----*-----*-----*-----*-----*-----*-----*-----*/
@@ -952,27 +1011,30 @@
 
    &__item {
       padding: rem(20);
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: box-shadow 0.3s ease 0s;
-      @media (any-hover: hover) {
-         &:hover {
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-         }
-      }
    }
 }
 
 .cartridge {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      flex: 1 1 auto;
+   }
 
    &__image {
       padding-bottom: 70%;
    }
 
    &__content {
-      padding-top: rem(30);
+      flex: 1 1 auto;
    }
 
    &__title {
+      padding-top: rem(20);
    }
 
    &__text {
@@ -1004,42 +1066,39 @@
 
    &__item {
       padding: rem(20);
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: box-shadow 0.3s ease 0s;
-      @media (any-hover: hover) {
-         &:hover {
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-         }
-      }
    }
 }
 .belonging {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 
    &__image {
-      padding-bottom: 90%;
+      padding-bottom: 100%;
    }
 
    &__body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
    }
 
    &__content {
-      padding-top: rem(30);
+      flex: 1 1 auto;
    }
 
    &__title {
+      padding-top: rem(20);
    }
 
    &__text {
-      font-size: rem(14);
-      font-weight: 500;
-      line-height: 1.2;
+      color: #000;
       padding: rem(10) 0;
    }
 
    &__price {
       font-size: rem(16);
       font-weight: 700;
-      padding-top: rem(10);
    }
 }
 
