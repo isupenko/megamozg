@@ -145,7 +145,7 @@ body {
 
 	&__belongings {
 		@include adaptiveValue("padding-top", 144, 30);
-		@include adaptiveValue("padding-bottom", 44, 30);
+		//@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
 		}
