@@ -953,9 +953,12 @@
    }
 
    &__title {
+      
    }
 
    &__text {
+      padding: rem(10) 0;
+      font-weight: 500;
    }
 
    &__price {
