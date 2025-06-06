@@ -31,11 +31,20 @@
    }
 
    &__sub-title {
-      font-size: rem(20);
+      //color: $darkGrayColor;
+      font-size: rem(22);
       font-weight: 700;
       padding: rem(10) 0;
       & span {
-         font-size: rem(16);
+         font-size: rem(20);
+         color: $yellowColor;
+         @media (any-hover: hover){
+            &:hover{
+               //box-shadow: 0 0 22px rgba(37, 37, 37, 0.7);
+               //color: #000;
+               text-decoration: underline
+            }
+         }
       }
    }
 
@@ -190,7 +199,7 @@
 .services {
    @media (min-width:$mobile){
       margin: rem(50) 0;
-      padding: rem(30) 0;
+      padding: rem(10) 0;
       background-color: $yellowColor;
    }
    &__list {
@@ -506,8 +515,12 @@
 
    &__item {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(rem(285), 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(rem(250), 1fr));
       gap: rem(32);
+      @media (max-width: $mobile){
+         grid-template-columns: repeat(auto-fit, minmax(rem(150), 1fr));
+         gap: rem(15);
+      }
    }
 }
 
