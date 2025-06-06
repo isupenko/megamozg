@@ -34,7 +34,7 @@
       //color: $darkGrayColor;
       font-size: rem(22);
       font-weight: 700;
-      padding: rem(10) 0;
+      padding: rem(8) 0;
       & span {
          font-size: rem(20);
          color: $yellowColor;
@@ -51,6 +51,12 @@
    &__tel {
       font-size: rem(26);
       font-weight: 600;
+      @media (any-hover: hover){
+            &:hover{
+               //box-shadow: 0 0 22px rgba(37, 37, 37, 0.7);
+               color: $orangeColor;
+            }
+         }
    }
 
    &__btn {
@@ -1188,3 +1194,48 @@
    }
 }
 
+
+/*-----*-----*-----*-----*-----*-----*----- contacts -----*-----*-----*-----*-----*-----*-----*-----*/
+
+.contacts {
+}
+.contacts__container {
+   display: flex;
+   flex-direction: column;
+   //text-align: center;
+}
+.contacts__logo {
+   //flex: 1 1 calc(565px / 157px) * 100%;
+   min-width: 100%;
+}
+
+.logo-contacts__link {
+   padding-bottom: 70%;
+}
+.contacts__title {
+}
+
+.contacts__content {
+   //font-size: rem(20);
+   //font-weight: 700
+}
+.contacts__img {
+   max-width: 100%;
+}
+.-ibg {
+}
+.contacts__txt {
+}
+.contact__address {
+}
+.contact__mode {
+}
+.contact__tel {
+}
+.contact__soc {
+}
+.contact__mail {
+}
+.contacts__maps {
+   
+}
