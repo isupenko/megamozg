@@ -204,7 +204,7 @@
 
 .services {
    @media (min-width:$mobile){
-      margin: rem(50) 0;
+      margin: rem(30) 0;
       padding: rem(10) 0;
       background-color: $yellowColor;
    }
@@ -379,7 +379,15 @@
 .commercial__yandex {
    max-width: 100%;
    display: block;
-   margin: 0 auto;
+   margin: 0 auto 40px;
+
+}
+
+.commercial__sambot {
+   max-width: 100%;
+   display: block;
+   margin: 0 auto 40px;
+   //border: 1px solid #000;
 }
 
 
@@ -668,6 +676,7 @@
 .life {
 
    &__container {
+
    }
 
    &__label {
@@ -691,6 +700,7 @@
    }
 
    &__list {
+      margin: 40px 0;
       display: grid;
       grid-template-columns: auto;
       grid-auto-flow: column;

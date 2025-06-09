@@ -89,15 +89,15 @@ body {
 
 	&__defects {
 		padding-top: rem(20);
-		padding-bottom: rem(70);
+		padding-bottom: rem(20);
    }
 
 	&__accessories {
-		padding: rem(40) 0;
+		//padding: rem(40) 0;
    }
 
 	&__life {
-		@include adaptiveValue("padding-bottom", 85, 40);
+		@include adaptiveValue("padding-bottom", 60, 20);
 	}
 
 	&__price-pc {
