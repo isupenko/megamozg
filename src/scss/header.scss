@@ -179,6 +179,15 @@
 		}
 	}
 
+	&__link-mod {
+		@media (min-width:$mobile){
+			//font-size: rem(18);
+			font-weight: 700;
+			border: 2px solid $yellowColor;
+			padding: rem(8);
+		}
+	}
+
 	&__arrow {
 		margin: 0 0 0 rem(6);
 		transition: all 0.3s ease 0s;

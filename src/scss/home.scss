@@ -1273,3 +1273,61 @@
 .contacts__maps {
    padding-top: rem(40);
 }
+
+
+/*-----*-----*-----*-----*-----*-----*----- ads -----*-----*-----*-----*-----*-----*-----*-----*/
+
+.ads {
+
+   &__container {
+   }
+
+   &__list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(rem(220), 1fr));
+      gap: rem(30);
+      padding: rem(20) 0 rem(50) 0;
+   }
+
+   &__item {
+      padding: rem(20);
+   }
+}
+.ad {
+   display: flex;
+   flex-direction: column;
+   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+   &__image {
+      padding-bottom: 100%;
+   }
+
+   &__body {
+      flex: 1 1 auto;
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__content {
+      flex: 1 1 auto;
+   }
+
+   &__title {
+      padding-top: rem(20);
+   }
+
+   &__text {
+      color: #000;
+      padding: rem(10) 0;
+   }
+
+   &__tel {
+      font-size: rem(16);
+      font-weight: 700;
+   }
+
+   &__price {
+      font-size: rem(16);
+      font-weight: 700;
+   }
+}

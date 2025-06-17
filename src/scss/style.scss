@@ -69,7 +69,7 @@ body {
 	flex: 1 1 auto;
 
 	&__promo {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -105,7 +105,7 @@ body {
    }
 
 	&__smart-house {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -116,7 +116,7 @@ body {
 	}
 
 	&__frontend {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -133,7 +133,7 @@ body {
    }
 
 	&__cartridges {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -144,7 +144,7 @@ body {
    }
 
 	&__belongings {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		//@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -155,7 +155,7 @@ body {
    }
 
 	&__second {
-		@include adaptiveValue("padding-top", 144, 30);
+		@include adaptiveValue("padding-top", 120, 30);
 		@include adaptiveValue("padding-bottom", 44, 30);
 		@media (max-width: $tablet){
 			padding-top: rem(80);
@@ -170,8 +170,19 @@ body {
 	}
 
 	&__contacts {
-		@include adaptiveValue("padding-top", 144, 60);
+		@include adaptiveValue("padding-top", 120, 60);
 	}
+
+	&__ads {
+		@include adaptiveValue("padding-top", 120, 30);
+		//@include adaptiveValue("padding-bottom", 44, 30);
+		@media (max-width: $tablet){
+			padding-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			padding-top: rem(60);
+		}
+   }
 }
 
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
