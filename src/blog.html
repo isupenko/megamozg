@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"СмартФикс"
+})
+
+<body>
+   <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+         <section class="page__blog blog">
+            <div class="blog__container">
+               <h1 class="blog__title title-h2">Блог сервиса СмартФикс</h1>
+               <div class="blog__list">
+                  <article class="blog__item">
+                     <div class="blog__image -ibg">
+                        <img src="img/ads/lenovo50-30.jpg" alt="lenovo G50-30">
+                     </div>
+                     <div class="blog__body">
+                        <div class="blog__content">
+                           <h5 class="blog__sub-title title-h4">Ноутбук Lenovo G50-30</h5>
+                           <div class="blog__text">SSD - 120 Гб, Оперативная память 4 Гб, Intel Celeron N2840 / 2.16 ГГц (2 ядра), 1366 x 768 (15.6") </div>
+                        </div>
+                     </div>
+                  </article>
+
+               </div>
+            </div>
+         </section>
+      </main>
+      @@include('html/_footer.htm',{})
+   </div>
+   @@include('html/_popup.htm',{})
+   @@include('html/_js.htm',{})
+</body>
+
+</html>
