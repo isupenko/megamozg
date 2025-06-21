@@ -1337,20 +1337,11 @@
 
 .blog {
 
-   &__container {
-
-   }
-
-   &__title {
-      padding-bottom: rem(40);
-   }
-
-   &__list {
-
+   &__content {
    }
 
    &__item {
-      //display: flex;
+      display: flex;
       padding: rem(20);
       border: 1px solid $orangeColor;
       border-radius: 20px;
@@ -1362,9 +1353,8 @@
 
    &__image {
       margin: rem(0) rem(20) rem(10) rem(0);
-      max-width: 300px;
-      //flex: 1 1 100%;
-      float: left;
+      max-width: 250px;
+      //float: left;
       @media (max-width: $mobile){
          flex: 1 1 100%;
          max-width: 100%;
@@ -1378,21 +1368,14 @@
       border-radius: 20px;
    }
 
-   &__body {
-
-   }
-
-   &__content {
-
-   }
-
-   &__sub-title {
+   &__title {
       font-size: rem(22);
       padding-bottom: rem(20);
    }
 
-   &__text {
-
+   &__sub-title {
+      font-weight: 600;
+      font-size: rem(16);
    }
 
    &__text ul {
@@ -1402,4 +1385,14 @@
    &__text li {
       list-style-type: disc;
    }
+
+   &__btn {
+      margin-top: rem(20);
+      //display:flex;
+      justify-content: flex-end;
+      @media (max-width: $mobile){
+         width: 100%;
+      }
+   }
+
 }
