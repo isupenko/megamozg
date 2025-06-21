@@ -1337,14 +1337,13 @@
 
 .blog {
 
-   &__content {
-   }
-
    &__item {
-      display: flex;
+      margin: rem(30) 0;
+      //display: flex;
       padding: rem(20);
-      border: 1px solid $orangeColor;
+      //border: 1px solid $orangeColor;
       border-radius: 20px;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
       @media (max-width: $mobile){
          display: flex;
          flex-direction: column;
@@ -1353,12 +1352,10 @@
 
    &__image {
       margin: rem(0) rem(20) rem(10) rem(0);
-      max-width: 250px;
-      //float: left;
+      max-width: 240px;
+      float: left;
       @media (max-width: $mobile){
-         flex: 1 1 100%;
          max-width: 100%;
-         text-align: center;
          margin: 0 0 20px 0;
       }
    }
@@ -1378,6 +1375,10 @@
       font-size: rem(16);
    }
 
+   &__text {
+      line-height: 130%;
+   }
+
    &__text ul {
       padding: 0 0 10px 30px;
    }
@@ -1386,13 +1387,20 @@
       list-style-type: disc;
    }
 
+   &__text h4 {
+      font-size: rem(18);
+      font-weight: 700;
+      padding: rem(10) rem(0);
+   }
+
    &__btn {
+      text-align: right;
       margin-top: rem(20);
-      //display:flex;
-      justify-content: flex-end;
+   }
+
+   &__btn button {
       @media (max-width: $mobile){
          width: 100%;
       }
    }
-
 }
