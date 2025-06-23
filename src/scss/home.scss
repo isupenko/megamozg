@@ -1350,21 +1350,6 @@
       }
    }
 
-   &__image {
-      margin: rem(0) rem(20) rem(10) rem(0);
-      max-width: 240px;
-      float: left;
-      @media (max-width: $mobile){
-         max-width: 100%;
-         margin: 0 0 20px 0;
-      }
-   }
-
-   &__image img {
-      width: 100%;
-      border-radius: 20px;
-   }
-
    &__title {
       font-size: rem(22);
       padding-bottom: rem(20);
@@ -1391,16 +1376,5 @@
       font-size: rem(18);
       font-weight: 700;
       padding: rem(10) rem(0);
-   }
-
-   &__btn {
-      text-align: right;
-      margin-top: rem(20);
-   }
-
-   &__btn button {
-      @media (max-width: $mobile){
-         width: 100%;
-      }
    }
 }
