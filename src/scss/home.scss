@@ -1338,50 +1338,24 @@
 .blog {
 
    &__item {
-      margin: rem(30) 0;
+      margin: rem(20) 0;
       padding: rem(20);
       border-radius: 20px;
-      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-   }
-
-   &__content {
-      //margin: rem(30) 0;
-      display: flex;
-      //padding: rem(20);
-      //border: 1px solid $orangeColor;
-      //border-radius: 20px;
-      //box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-      @media (max-width: $mobile){
-         display: flex;
-         flex-direction: column;
+      box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.7);
+      transition: all 0.1s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.4);
+         }
       }
-   }
-
-   &__image {
-      max-width: 240px;
-      @media (max-width: $mobile){
-         max-width: 100%;
-      }
-   }
-
-   &__image img {
-      width: 100%;
-      border-radius: 20px;
-   }
-
-   &__title {
-      font-size: rem(22);
-      padding-bottom: rem(20);
    }
 
    &__sub-title {
+      padding-top: rem(20);
       font-weight: 600;
       font-size: rem(16);
    }
 
-   &__txt {
-      padding-left: rem(20);
-   }
 
    &__text {
       line-height: 130%;
@@ -1401,11 +1375,34 @@
       padding: rem(10) rem(0);
    }
 
-   &__more {
-      margin-top: rem(20);
-      text-align: right;
-      @media (max-width: $mobile) {
+   &__arrow {
+      display: flex;
+      flex-direction: row-reverse;
+      text-align: left;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      @include adaptiveValue("font-size", 22, 20);
+      font-weight: 600;
+      
+      ._spoller-init & {
+         display: flex;
          width: 100%;
+         justify-content:space-between;
+         align-items:center;
+         flex-direction: row-reverse;
+         @extend ._icon-arrow-down;
+         &::before {
+            @extend %ic;
+            font-size: rem(14);
+            transition: transform 0.3s ease 0s;
+            //padding-left: rem(20);
+         }
+      }
+      &._spoller-active {
+         &::before {
+            transform: rotate(-180deg);
+         }
       }
    }
 }
